@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "G.R.I.D.",
+  "version": "2.0.5",
+  "description": "Generate, Respond, Identify, Dominate - A fully autonomous survey-killer powered by AI with matrix question support",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.awanllm.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "G.R.I.D."
+  }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Question Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: 200px repeat(5, 1fr);
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .matrix-header {
+            font-weight: bold;
+            background-color: #f5f5f5;
+            padding: 8px;
+            text-align: center;
+        }
+        .matrix-row {
+            display: contents;
+        }
+        .row-label {
+            padding: 8px;
+            font-weight: bold;
+        }
+        .matrix-cell {
+            text-align: center;
+            padding: 8px;
+        }
+        fieldset {
+            margin: 20px 0;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matrix Question Test Page</h1>
+    <p>This page contains various types of matrix questions to test the enhanced G.R.I.D. extension.</p>
+
+    <!-- Table-based Matrix Question -->
+    <div class="question-section">
+        <h2>How satisfied are you with the following aspects of our service?</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Very Dissatisfied</th>
+                    <th>Dissatisfied</th>
+                    <th>Neutral</th>
+                    <th>Satisfied</th>
+                    <th>Very Satisfied</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Customer Support</strong></td>
+                    <td><input type="radio" name="support" value="1"></td>
+                    <td><input type="radio" name="support" value="2"></td>
+                    <td><input type="radio" name="support" value="3"></td>
+                    <td><input type="radio" name="support" value="4"></td>
+                    <td><input type="radio" name="support" value="5"></td>
+                </tr>
+                <tr>
+                    <td><strong>Product Quality</strong></td>
+                    <td><input type="radio" name="quality" value="1"></td>
+                    <td><input type="radio" name="quality" value="2"></td>
+                    <td><input type="radio" name="quality" value="3"></td>
+                    <td><input type="radio" name="quality" value="4"></td>
+                    <td><input type="radio" name="quality" value="5"></td>
+                </tr>
+                <tr>
+                    <td><strong>Delivery Speed</strong></td>
+                    <td><input type="radio" name="delivery" value="1"></td>
+                    <td><input type="radio" name="delivery" value="2"></td>
+                    <td><input type="radio" name="delivery" value="3"></td>
+                    <td><input type="radio" name="delivery" value="4"></td>
+                    <td><input type="radio" name="delivery" value="5"></td>
+                </tr>
+                <tr>
+                    <td><strong>Website Usability</strong></td>
+                    <td><input type="radio" name="website" value="1"></td>
+                    <td><input type="radio" name="website" value="2"></td>
+                    <td><input type="radio" name="website" value="3"></td>
+                    <td><input type="radio" name="website" value="4"></td>
+                    <td><input type="radio" name="website" value="5"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Div-based Matrix Question -->
+    <div class="question-section">
+        <h2>How important are the following features to you?</h2>
+        <div class="matrix-grid">
+            <div class="matrix-header"></div>
+            <div class="matrix-header">Not Important</div>
+            <div class="matrix-header">Slightly Important</div>
+            <div class="matrix-header">Moderately Important</div>
+            <div class="matrix-header">Very Important</div>
+            <div class="matrix-header">Extremely Important</div>
+            
+            <div class="matrix-row">
+                <div class="row-label">Price</div>
+                <div class="matrix-cell"><input type="radio" name="price_importance" value="1"></div>
+                <div class="matrix-cell"><input type="radio" name="price_importance" value="2"></div>
+                <div class="matrix-cell"><input type="radio" name="price_importance" value="3"></div>
+                <div class="matrix-cell"><input type="radio" name="price_importance" value="4"></div>
+                <div class="matrix-cell"><input type="radio" name="price_importance" value="5"></div>
+            </div>
+            
+            <div class="matrix-row">
+                <div class="row-label">Brand Reputation</div>
+                <div class="matrix-cell"><input type="radio" name="brand_importance" value="1"></div>
+                <div class="matrix-cell"><input type="radio" name="brand_importance" value="2"></div>
+                <div class="matrix-cell"><input type="radio" name="brand_importance" value="3"></div>
+                <div class="matrix-cell"><input type="radio" name="brand_importance" value="4"></div>
+                <div class="matrix-cell"><input type="radio" name="brand_importance" value="5"></div>
+            </div>
+            
+            <div class="matrix-row">
+                <div class="row-label">Customer Reviews</div>
+                <div class="matrix-cell"><input type="radio" name="reviews_importance" value="1"></div>
+                <div class="matrix-cell"><input type="radio" name="reviews_importance" value="2"></div>
+                <div class="matrix-cell"><input type="radio" name="reviews_importance" value="3"></div>
+                <div class="matrix-cell"><input type="radio" name="reviews_importance" value="4"></div>
+                <div class="matrix-cell"><input type="radio" name="reviews_importance" value="5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fieldset-based Matrix Question -->
+    <div class="question-section">
+        <fieldset>
+            <legend>How often do you engage in the following activities?</legend>
+            
+            <div style="margin: 15px 0;">
+                <strong>Exercise/Fitness</strong><br>
+                <label><input type="radio" name="exercise_freq" value="never"> Never</label>
+                <label><input type="radio" name="exercise_freq" value="rarely"> Rarely</label>
+                <label><input type="radio" name="exercise_freq" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="exercise_freq" value="often"> Often</label>
+                <label><input type="radio" name="exercise_freq" value="daily"> Daily</label>
+            </div>
+            
+            <div style="margin: 15px 0;">
+                <strong>Reading Books</strong><br>
+                <label><input type="radio" name="reading_freq" value="never"> Never</label>
+                <label><input type="radio" name="reading_freq" value="rarely"> Rarely</label>
+                <label><input type="radio" name="reading_freq" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="reading_freq" value="often"> Often</label>
+                <label><input type="radio" name="reading_freq" value="daily"> Daily</label>
+            </div>
+            
+            <div style="margin: 15px 0;">
+                <strong>Social Media</strong><br>
+                <label><input type="radio" name="social_freq" value="never"> Never</label>
+                <label><input type="radio" name="social_freq" value="rarely"> Rarely</label>
+                <label><input type="radio" name="social_freq" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="social_freq" value="often"> Often</label>
+                <label><input type="radio" name="social_freq" value="daily"> Daily</label>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Regular Questions for Comparison -->
+    <div class="question-section">
+        <h2>Additional Information</h2>
+        
+        <div style="margin: 15px 0;">
+            <label for="name"><strong>Your Name:</strong></label><br>
+            <input type="text" id="name" name="name" style="width: 300px; padding: 5px;">
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <label for="email"><strong>Email Address:</strong></label><br>
+            <input type="email" id="email" name="email" style="width: 300px; padding: 5px;">
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <strong>Age Group:</strong><br>
+            <label><input type="radio" name="age_group" value="18-24"> 18-24</label>
+            <label><input type="radio" name="age_group" value="25-34"> 25-34</label>
+            <label><input type="radio" name="age_group" value="35-44"> 35-44</label>
+            <label><input type="radio" name="age_group" value="45-54"> 45-54</label>
+            <label><input type="radio" name="age_group" value="55+"> 55+</label>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <label for="comments"><strong>Additional Comments:</strong></label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Please share any additional feedback..."></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Survey</button>
+
+    <script>
+        // Simple form submission handler for testing
+        document.querySelector('.submit-btn').addEventListener('click', function() {
+            alert('Survey submitted! (This is just a test page)');
+        });
+    </script>
+</body>
+</html>
+
