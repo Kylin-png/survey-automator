@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolving Flight Simulator</title>
+  <link rel="stylesheet" href="flight-simulator.css">
+</head>
+<body>
+  <header class="hud">
+    <div class="hud__group">
+      <h1 class="hud__title">Evolving Flight Simulator</h1>
+      <p class="hud__subtitle">Neural pilots learn to glide farther every generation.</p>
+    </div>
+    <div class="hud__controls">
+      <button id="toggle-run" class="hud__button">Pause</button>
+      <button id="reset" class="hud__button">Reset</button>
+    </div>
+  </header>
+  <main class="main">
+    <canvas id="sim"></canvas>
+    <section class="stats">
+      <div class="stats__row"><span>Generation:</span><strong id="generation">1</strong></div>
+      <div class="stats__row"><span>Alive:</span><strong id="alive">0</strong></div>
+      <div class="stats__row"><span>Best Distance:</span><strong id="best-distance">0</strong>m</div>
+      <div class="stats__row"><span>Last Best:</span><strong id="last-best">0</strong>m</div>
+      <div class="stats__row"><span>Mutation Rate:</span><strong>8%</strong></div>
+      <div class="stats__row"><span>Population Size:</span><strong>30</strong></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Watch the neural-network pilots learn to dodge storm drones, balance thrust, and fly farther each generation.</p>
+  </footer>
+  <script src="flight-simulator.js"></script>
+</body>
+</html>
